@@ -34,7 +34,7 @@ Summary:	SPOOLES development files
 Summary(es):	Ficheros de desarrollo de SPOOLES
 Summary(pl):	Pliki programistyczne SPOOLES
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 SPOOLES development files.
@@ -50,7 +50,7 @@ Summary:	Static SPOOLES library
 Summary(es):	Biblioteca SPOOLES estática
 Summary(pl):	Statyczna biblioteka SPOOLES
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static SPOOLES library.
