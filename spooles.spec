@@ -77,7 +77,7 @@ Documentación para SPOOLES en el formato PostScript.
 Dokumentacja dla SPOOLES w formacie PostScript.
 
 %prep
-%setup -q -c %{name}-%{version}
+%setup -q -c 
 %patch0 -p1
 
 %build
