@@ -1,0 +1,657 @@
+diff -urN spooles-2.2.orig/A2/Makefile.am spooles-2.2.new/A2/Makefile.am
+--- spooles-2.2.orig/A2/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/A2/Makefile.am	2003-11-04 08:37:48.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/A2/src/Makefile.am spooles-2.2.new/A2/src/Makefile.am
+--- spooles-2.2.orig/A2/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/A2/src/Makefile.am	2003-11-22 12:56:14.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libA2.la
++libA2_la_SOURCES = \
++	basics.c copyEntriesToVector.c init.c instance.c IO.c makeStaircase.c\
++	norms.c QRreduce.c sort.c util.c
+diff -urN spooles-2.2.orig/BKL/Makefile.am spooles-2.2.new/BKL/Makefile.am
+--- spooles-2.2.orig/BKL/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/BKL/Makefile.am	2003-11-23 13:21:09.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/BKL/src/Makefile.am spooles-2.2.new/BKL/src/Makefile.am
+--- spooles-2.2.orig/BKL/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/BKL/src/Makefile.am	2003-11-22 12:56:24.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libBKL.la
++libBKL_la_SOURCES = \
++	basics.c evalfcn.c exhSearch.c fidmat.c init.c util.c
+diff -urN spooles-2.2.orig/BPG/Makefile.am spooles-2.2.new/BPG/Makefile.am
+--- spooles-2.2.orig/BPG/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/BPG/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/BPG/src/Makefile.am spooles-2.2.new/BPG/src/Makefile.am
+--- spooles-2.2.orig/BPG/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/BPG/src/Makefile.am	2003-11-22 12:56:37.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libBPG.la
++libBPG_la_SOURCES = \
++	basics.c DM.c init.c IO.c makeGraphs.c maxFlow.c\
++	pseudo.c
+diff -urN spooles-2.2.orig/Chv/Makefile.am spooles-2.2.new/Chv/Makefile.am
+--- spooles-2.2.orig/Chv/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Chv/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Chv/src/Makefile.am spooles-2.2.new/Chv/src/Makefile.am
+--- spooles-2.2.orig/Chv/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Chv/src/Makefile.am	2003-11-21 22:41:54.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libChv.la
++libChv_la_SOURCES = \
++	assemble.c basics.c copy.c factor.c findPivot.c init.c\
++	instance.c IO.c search.c swap.c update.c util.c
+diff -urN spooles-2.2.orig/ChvList/Makefile.am spooles-2.2.new/ChvList/Makefile.am
+--- spooles-2.2.orig/ChvList/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ChvList/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/ChvList/src/Makefile.am spooles-2.2.new/ChvList/src/Makefile.am
+--- spooles-2.2.orig/ChvList/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ChvList/src/Makefile.am	2003-11-21 22:42:04.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libChvList.la
++libChvList_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/ChvManager/Makefile.am spooles-2.2.new/ChvManager/Makefile.am
+--- spooles-2.2.orig/ChvManager/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ChvManager/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/ChvManager/src/Makefile.am spooles-2.2.new/ChvManager/src/Makefile.am
+--- spooles-2.2.orig/ChvManager/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ChvManager/src/Makefile.am	2003-11-21 22:45:00.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libChvManager.la
++libChvManager_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/configure.in spooles-2.2.new/configure.in
+--- spooles-2.2.orig/configure.in	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/configure.in	2003-11-23 21:39:03.000000000 +0100
+@@ -0,0 +1,107 @@
++dnl Process this file with autoconf to produce a configure script.
++AC_INIT(spooles, 2.2.0)
++AM_INIT_AUTOMAKE
++AC_CONFIG_HEADER([config.h])
++
++dnl Checks for programs.
++AC_PROG_CC
++AC_PROG_MAKE_SET
++AM_PROG_LIBTOOL
++
++dnl Checks for libraries.
++AC_CHECK_LIB([m], [main])
++AC_CHECK_LIB([pthread], [main])
++
++dnl Checks for header files.
++AC_HEADER_STDC
++AC_CHECK_HEADERS([stdlib.h string.h sys/time.h])
++
++dnl Checks for typedefs, structures, and compiler characteristics.
++AC_C_CONST
++AC_HEADER_TIME
++
++dnl Checks for library functions.
++AC_FUNC_MALLOC
++AC_CHECK_FUNCS([gettimeofday sqrt strchr strtol])
++
++AC_CONFIG_FILES([Makefile
++		A2/Makefile
++		A2/src/Makefile
++		BKL/Makefile
++		BKL/src/Makefile
++		BPG/Makefile
++		BPG/src/Makefile
++		Chv/Makefile
++		Chv/src/Makefile
++		ChvList/Makefile
++		ChvList/src/Makefile
++		ChvManager/Makefile
++		ChvManager/src/Makefile
++		Coords/Makefile
++		Coords/src/Makefile
++		DSTree/Makefile
++		DSTree/src/Makefile
++		DV/Makefile
++		DV/src/Makefile
++		DenseMtx/Makefile
++		DenseMtx/src/Makefile
++		Drand/Makefile
++		Drand/src/Makefile
++		EGraph/Makefile
++		EGraph/src/Makefile
++		ETree/Makefile
++		ETree/src/Makefile
++		FrontMtx/Makefile
++		FrontMtx/src/Makefile
++		GPart/Makefile
++		GPart/src/Makefile
++		Graph/Makefile
++		Graph/src/Makefile
++		I2Ohash/Makefile
++		I2Ohash/src/Makefile
++		IIheap/Makefile
++		IIheap/src/Makefile
++		IV/Makefile
++		IV/src/Makefile
++		IVL/Makefile
++		IVL/src/Makefile
++		Ideq/Makefile
++		Ideq/src/Makefile
++		ILUMtx/Makefile
++		ILUMtx/src/Makefile
++		InpMtx/Makefile
++		InpMtx/src/Makefile
++		Lock/Makefile
++		Lock/src/Makefile
++		MSMD/Makefile
++		MSMD/src/Makefile
++		Network/Makefile
++		Network/src/Makefile
++		PatchAndGoInfo/Makefile
++		PatchAndGoInfo/src/Makefile
++		Pencil/Makefile
++		Pencil/src/Makefile
++		Perm/Makefile
++		Perm/src/Makefile
++		SemiImplMtx/Makefile
++		SemiImplMtx/src/Makefile
++    		SolveMap/Makefile
++		SolveMap/src/Makefile
++		SubMtx/Makefile
++		SubMtx/src/Makefile
++		SubMtxList/Makefile
++		SubMtxList/src/Makefile
++		SubMtxManager/Makefile
++		SubMtxManager/src/Makefile
++		SymbFac/Makefile
++		SymbFac/src/Makefile
++		Tree/Makefile
++		Tree/src/Makefile
++		Utilities/Makefile
++		Utilities/src/Makefile
++		ZV/Makefile
++		ZV/src/Makefile
++		misc/Makefile
++		misc/src/Makefile])
++
++AC_OUTPUT
+diff -urN spooles-2.2.orig/Coords/Makefile.am spooles-2.2.new/Coords/Makefile.am
+--- spooles-2.2.orig/Coords/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Coords/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Coords/src/Makefile.am spooles-2.2.new/Coords/src/Makefile.am
+--- spooles-2.2.orig/Coords/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Coords/src/Makefile.am	2003-11-21 22:50:36.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libCoords.la
++libCoords_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/DenseMtx/Makefile.am spooles-2.2.new/DenseMtx/Makefile.am
+--- spooles-2.2.orig/DenseMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DenseMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/DenseMtx/src/Makefile.am spooles-2.2.new/DenseMtx/src/Makefile.am
+--- spooles-2.2.orig/DenseMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DenseMtx/src/Makefile.am	2003-11-21 22:58:05.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libDenseMtx.la
++libDenseMtx_la_SOURCES = \
++	basics.c initAsSubmtx.c init.c instance.c IO.c permute.c\
++	scale.c util.c
+diff -urN spooles-2.2.orig/Drand/Makefile.am spooles-2.2.new/Drand/Makefile.am
+--- spooles-2.2.orig/Drand/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Drand/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Drand/src/Makefile.am spooles-2.2.new/Drand/src/Makefile.am
+--- spooles-2.2.orig/Drand/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Drand/src/Makefile.am	2003-11-21 23:01:27.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libDrand.la
++libDrand_la_SOURCES = \
++	basics.c init.c util.c
+diff -urN spooles-2.2.orig/DSTree/Makefile.am spooles-2.2.new/DSTree/Makefile.am
+--- spooles-2.2.orig/DSTree/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DSTree/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/DSTree/src/Makefile.am spooles-2.2.new/DSTree/src/Makefile.am
+--- spooles-2.2.orig/DSTree/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DSTree/src/Makefile.am	2003-11-21 22:54:43.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libDSTree.la
++libDSTree_la_SOURCES = \
++	basics.c init.c instance.c IO.c stages.c util.c
+diff -urN spooles-2.2.orig/DV/Makefile.am spooles-2.2.new/DV/Makefile.am
+--- spooles-2.2.orig/DV/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DV/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/DV/src/Makefile.am spooles-2.2.new/DV/src/Makefile.am
+--- spooles-2.2.orig/DV/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/DV/src/Makefile.am	2003-11-21 22:56:17.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libDV.la
++libDV_la_SOURCES = \
++	basics.c init.c instance.c IO.c profile.c util.c
+diff -urN spooles-2.2.orig/EGraph/Makefile.am spooles-2.2.new/EGraph/Makefile.am
+--- spooles-2.2.orig/EGraph/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/EGraph/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/EGraph/src/Makefile.am spooles-2.2.new/EGraph/src/Makefile.am
+--- spooles-2.2.orig/EGraph/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/EGraph/src/Makefile.am	2003-11-21 23:04:05.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libEGraph.la
++libEGraph_la_SOURCES = \
++	basics.c init.c IO.c misc.c mkAdjGraph.c
+diff -urN spooles-2.2.orig/ETree/Makefile.am spooles-2.2.new/ETree/Makefile.am
+--- spooles-2.2.orig/ETree/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ETree/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/ETree/src/Makefile.am spooles-2.2.new/ETree/src/Makefile.am
+--- spooles-2.2.orig/ETree/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ETree/src/Makefile.am	2003-11-21 23:10:33.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libETree.la
++libETree_la_SOURCES = \
++	basics.c compress.c init.c initFromSubtree.c instance.c IO.c\
++	justify.c maps.c metrics.c ms.c permute.c semi.c\
++	storage.c transform.c util.c
+diff -urN spooles-2.2.orig/FrontMtx/Makefile.am spooles-2.2.new/FrontMtx/Makefile.am
+--- spooles-2.2.orig/FrontMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/FrontMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/FrontMtx/src/Makefile.am spooles-2.2.new/FrontMtx/src/Makefile.am
+--- spooles-2.2.orig/FrontMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/FrontMtx/src/Makefile.am	2003-11-21 23:26:47.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libFrontMtx.la
++libFrontMtx_la_SOURCES = \
++	basics.c factor.c factorUtil.c init.c instance.c IO.c\
++	loadEntries.c permute.c postponed.c postProcess.c QRfactor.c QRsolve.c\
++	QRutil.c solve.c solveUtil.c split.c storeFront.c update.c util.c
+diff -urN spooles-2.2.orig/GPart/Makefile.am spooles-2.2.new/GPart/Makefile.am
+--- spooles-2.2.orig/GPart/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/GPart/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/GPart/src/Makefile.am spooles-2.2.new/GPart/src/Makefile.am
+--- spooles-2.2.orig/GPart/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/GPart/src/Makefile.am	2003-11-22 08:13:31.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libGPart.la
++libGPart_la_SOURCES = \
++	basics.c DDsepInfo.c DDviaFishnet.c DDviaProjection.c domSegMap.c identifyWideSep.c\
++	init.c makeYCmap.c RBviaDDsep.c smoothBisector.c smoothBy2layers.c smoothYSep.c\
++	split.c TwoSetViaBKL.c util.c
+diff -urN spooles-2.2.orig/Graph/Makefile.am spooles-2.2.new/Graph/Makefile.am
+--- spooles-2.2.orig/Graph/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Graph/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Graph/src/Makefile.am spooles-2.2.new/Graph/src/Makefile.am
+--- spooles-2.2.orig/Graph/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Graph/src/Makefile.am	2003-11-22 08:15:42.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libGraph.la
++libGraph_la_SOURCES = \
++	basics.c compress.c equivMap.c expand.c fillFromOffsets.c init.c\
++	IO.c setListsFromOffsets.c util.c wirebasket.c
+diff -urN spooles-2.2.orig/I2Ohash/Makefile.am spooles-2.2.new/I2Ohash/Makefile.am
+--- spooles-2.2.orig/I2Ohash/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/I2Ohash/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/I2Ohash/src/Makefile.am spooles-2.2.new/I2Ohash/src/Makefile.am
+--- spooles-2.2.orig/I2Ohash/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/I2Ohash/src/Makefile.am	2003-11-22 08:47:13.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libI2Ohash.la
++libI2Ohash_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/Ideq/Makefile.am spooles-2.2.new/Ideq/Makefile.am
+--- spooles-2.2.orig/Ideq/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Ideq/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Ideq/src/Makefile.am spooles-2.2.new/Ideq/src/Makefile.am
+--- spooles-2.2.orig/Ideq/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Ideq/src/Makefile.am	2003-11-22 09:14:22.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libIdeq.la
++libIdeq_la_SOURCES = \
++	basics.c IO.c resize.c util.c
+diff -urN spooles-2.2.orig/IIheap/Makefile.am spooles-2.2.new/IIheap/Makefile.am
+--- spooles-2.2.orig/IIheap/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IIheap/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/IIheap/src/Makefile.am spooles-2.2.new/IIheap/src/Makefile.am
+--- spooles-2.2.orig/IIheap/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IIheap/src/Makefile.am	2003-11-22 08:56:20.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libIIheap.la
++libIIheap_la_SOURCES = \
++	basics.c
+diff -urN spooles-2.2.orig/ILUMtx/Makefile.am spooles-2.2.new/ILUMtx/Makefile.am
+--- spooles-2.2.orig/ILUMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ILUMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/ILUMtx/src/Makefile.am spooles-2.2.new/ILUMtx/src/Makefile.am
+--- spooles-2.2.orig/ILUMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ILUMtx/src/Makefile.am	2003-11-22 09:15:41.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libILUMtx.la
++libILUMtx_la_SOURCES = \
++	basics.c factor.c init.c IO.c misc.c solve.c
+diff -urN spooles-2.2.orig/InpMtx/Makefile.am spooles-2.2.new/InpMtx/Makefile.am
+--- spooles-2.2.orig/InpMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/InpMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/InpMtx/src/Makefile.am spooles-2.2.new/InpMtx/src/Makefile.am
+--- spooles-2.2.orig/InpMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/InpMtx/src/Makefile.am	2003-11-22 09:17:26.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libInpMtx.la
++libInpMtx_la_SOURCES = \
++	adjForATA.c basics.c extract.c fullAdj.c gmmm.c gmvm.c\
++	init.c input.c instance.c IO.c map.c mvm.c\
++	mvmVector.c permute.c profile.c support.c util.c
+diff -urN spooles-2.2.orig/IV/Makefile.am spooles-2.2.new/IV/Makefile.am
+--- spooles-2.2.orig/IV/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IV/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/IV/src/Makefile.am spooles-2.2.new/IV/src/Makefile.am
+--- spooles-2.2.orig/IV/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IV/src/Makefile.am	2003-11-22 08:57:50.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libIV.la
++libIV_la_SOURCES = \
++	basics.c init.c instance.c IO.c util.c
+diff -urN spooles-2.2.orig/IVL/Makefile.am spooles-2.2.new/IVL/Makefile.am
+--- spooles-2.2.orig/IVL/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IVL/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/IVL/src/Makefile.am spooles-2.2.new/IVL/src/Makefile.am
+--- spooles-2.2.orig/IVL/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/IVL/src/Makefile.am	2003-11-22 08:58:50.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libIVL.la
++libIVL_la_SOURCES = \
++	basics.c init.c instance.c IO.c listmanip.c misc.c\
++	subIVL.c util.c
+diff -urN spooles-2.2.orig/Lock/Makefile.am spooles-2.2.new/Lock/Makefile.am
+--- spooles-2.2.orig/Lock/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Lock/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Lock/src/Makefile.am spooles-2.2.new/Lock/src/Makefile.am
+--- spooles-2.2.orig/Lock/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Lock/src/Makefile.am	2003-11-22 11:55:47.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libLock.la
++libLock_la_SOURCES = \
++	basics.c init.c util.c
+diff -urN spooles-2.2.orig/Makefile.am spooles-2.2.new/Makefile.am
+--- spooles-2.2.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Makefile.am	2003-11-22 12:59:02.000000000 +0100
+@@ -0,0 +1,49 @@
++SUBDIRS = A2 BKL BPG Chv ChvList ChvManager Coords DSTree DV\
++	 DenseMtx Drand EGraph ETree FrontMtx GPart Graph I2Ohash IIheap\
++	 IV IVL Ideq ILUMtx InpMtx Lock MSMD Network PatchAndGoInfo\
++	 Pencil Perm SemiImplMtx SolveMap SubMtx SubMtxList SubMtxManager SymbFac Tree\
++	 Utilities ZV misc
++LIBTOOL = $(SHELL) $(top_builddir)/libtool $(LTTAG)
++lib_LTLIBRARIES = libspooles.la
++libspooles_la_LDFLAGS = -version-info $(subst .,:,@VERSION@)
++libspooles_la_SOURCES =
++libspooles_la_LIBADD = \
++	A2/src/libA2.la\
++	BKL/src/libBKL.la\
++	BPG/src/libBPG.la\
++	Chv/src/libChv.la\
++	ChvList/src/libChvList.la\
++	ChvManager/src/libChvManager.la\
++	Coords/src/libCoords.la\
++	DSTree/src/libDSTree.la\
++	DV/src/libDV.la\
++	DenseMtx/src/libDenseMtx.la\
++	Drand/src/libDrand.la\
++	EGraph/src/libEGraph.la\
++	ETree/src/libETree.la\
++	FrontMtx/src/libFrontMtx.la\
++	GPart/src/libGPart.la\
++	Graph/src/libGraph.la\
++	I2Ohash/src/libI2Ohash.la\
++	IIheap/src/libIIheap.la\
++	IV/src/libIV.la\
++	IVL/src/libIVL.la\
++	Ideq/src/libIdeq.la\
++	ILUMtx/src/libILUMtx.la\
++	InpMtx/src/libInpMtx.la\
++	Lock/src/libLock.la\
++	MSMD/src/libMSMD.la\
++	Network/src/libNetwork.la\
++	PatchAndGoInfo/src/libPatchAndGoInfo.la\
++	Pencil/src/libPencil.la\
++	Perm/src/libPerm.la\
++	SemiImplMtx/src/libSemiImplMtx.la\
++	SolveMap/src/libSolveMap.la\
++	SubMtx/src/libSubMtx.la\
++	SubMtxList/src/libSubMtxList.la\
++	SubMtxManager/src/libSubMtxManager.la\
++	SymbFac/src/libSymbFac.la\
++	Tree/src/libTree.la\
++	Utilities/src/libUtilities.la\
++	ZV/src/libZV.la\
++	misc/src/libmisc.la
+diff -urN spooles-2.2.orig/misc/Makefile.am spooles-2.2.new/misc/Makefile.am
+--- spooles-2.2.orig/misc/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/misc/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/misc/src/Makefile.am spooles-2.2.new/misc/src/Makefile.am
+--- spooles-2.2.orig/misc/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/misc/src/Makefile.am	2003-11-22 12:15:42.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libmisc.la
++libmisc_la_SOURCES = \
++	drawGraphEPS.c fpgrids.c localND.c mkNDlinsys.c mkNDlinsysQR.c ND2.c\
++	ND.c orderViaBestOfNDandMS.c orderViaMMD.c orderViaMS.c orderViaND.c
+diff -urN spooles-2.2.orig/MSMD/Makefile.am spooles-2.2.new/MSMD/Makefile.am
+--- spooles-2.2.orig/MSMD/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/MSMD/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/MSMD/src/Makefile.am spooles-2.2.new/MSMD/src/Makefile.am
+--- spooles-2.2.orig/MSMD/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/MSMD/src/Makefile.am	2003-11-22 11:57:39.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libMSMD.la
++libMSMD_la_SOURCES = \
++	basics.c cleanReachSet.c eliminate.c fillPerms.c findInodes.c frontETree.c\
++	init.c makeSchurComplement.c MSMDinfo.c MSMDvtx.c order.c update.c
+diff -urN spooles-2.2.orig/Network/Makefile.am spooles-2.2.new/Network/Makefile.am
+--- spooles-2.2.orig/Network/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Network/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Network/src/Makefile.am spooles-2.2.new/Network/src/Makefile.am
+--- spooles-2.2.orig/Network/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Network/src/Makefile.am	2003-11-22 11:59:20.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libNetwork.la
++libNetwork_la_SOURCES = \
++	addArc.c augmentPath.c basics.c findAugmentingPath.c findMaxFlow.c findMincut.c\
++	init.c IO.c
+diff -urN spooles-2.2.orig/PatchAndGoInfo/Makefile.am spooles-2.2.new/PatchAndGoInfo/Makefile.am
+--- spooles-2.2.orig/PatchAndGoInfo/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/PatchAndGoInfo/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/PatchAndGoInfo/src/Makefile.am spooles-2.2.new/PatchAndGoInfo/src/Makefile.am
+--- spooles-2.2.orig/PatchAndGoInfo/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/PatchAndGoInfo/src/Makefile.am	2003-11-22 12:00:25.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libPatchAndGoInfo.la
++libPatchAndGoInfo_la_SOURCES = \
++	basics.c init.c
+diff -urN spooles-2.2.orig/Pencil/Makefile.am spooles-2.2.new/Pencil/Makefile.am
+--- spooles-2.2.orig/Pencil/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Pencil/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Pencil/src/Makefile.am spooles-2.2.new/Pencil/src/Makefile.am
+--- spooles-2.2.orig/Pencil/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Pencil/src/Makefile.am	2003-11-22 12:01:43.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libPencil.la
++libPencil_la_SOURCES = \
++	basics.c init.c IO.c mmm.c permute.c setup.c\
++	util.c
+diff -urN spooles-2.2.orig/Perm/Makefile.am spooles-2.2.new/Perm/Makefile.am
+--- spooles-2.2.orig/Perm/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Perm/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Perm/src/Makefile.am spooles-2.2.new/Perm/src/Makefile.am
+--- spooles-2.2.orig/Perm/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Perm/src/Makefile.am	2003-11-22 12:02:30.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libPerm.la
++libPerm_la_SOURCES = \
++	basics.c compress.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/SemiImplMtx/Makefile.am spooles-2.2.new/SemiImplMtx/Makefile.am
+--- spooles-2.2.orig/SemiImplMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SemiImplMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SemiImplMtx/src/Makefile.am spooles-2.2.new/SemiImplMtx/src/Makefile.am
+--- spooles-2.2.orig/SemiImplMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SemiImplMtx/src/Makefile.am	2003-11-22 12:03:46.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libSemiImplMtx.la
++libSemiImplMtx_la_SOURCES = \
++	basics.c init.c IO.c solve.c util.c
+diff -urN spooles-2.2.orig/SolveMap/Makefile.am spooles-2.2.new/SolveMap/Makefile.am
+--- spooles-2.2.orig/SolveMap/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SolveMap/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SolveMap/src/Makefile.am spooles-2.2.new/SolveMap/src/Makefile.am
+--- spooles-2.2.orig/SolveMap/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SolveMap/src/Makefile.am	2003-11-22 12:04:51.000000000 +0100
+@@ -0,0 +1,4 @@
++noinst_LTLIBRARIES = libSolveMap.la
++libSolveMap_la_SOURCES = \
++	basics.c init.c instance.c IO.c maps.c setup.c\
++	util.c
+diff -urN spooles-2.2.orig/SubMtx/Makefile.am spooles-2.2.new/SubMtx/Makefile.am
+--- spooles-2.2.orig/SubMtx/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtx/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SubMtx/src/Makefile.am spooles-2.2.new/SubMtx/src/Makefile.am
+--- spooles-2.2.orig/SubMtx/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtx/src/Makefile.am	2003-11-22 12:06:02.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libSubMtx.la
++libSubMtx_la_SOURCES = \
++	basics.c init.c initRandom.c instance.c IO.c scalevec.c\
++	solve.c solveH.c solveT.c solveupd.c solveupdH.c solveupdT.c\
++	sort.c util.c
+diff -urN spooles-2.2.orig/SubMtxList/Makefile.am spooles-2.2.new/SubMtxList/Makefile.am
+--- spooles-2.2.orig/SubMtxList/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtxList/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SubMtxList/src/Makefile.am spooles-2.2.new/SubMtxList/src/Makefile.am
+--- spooles-2.2.orig/SubMtxList/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtxList/src/Makefile.am	2003-11-22 12:07:04.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libSubMtxList.la
++libSubMtxList_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/SubMtxManager/Makefile.am spooles-2.2.new/SubMtxManager/Makefile.am
+--- spooles-2.2.orig/SubMtxManager/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtxManager/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SubMtxManager/src/Makefile.am spooles-2.2.new/SubMtxManager/src/Makefile.am
+--- spooles-2.2.orig/SubMtxManager/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SubMtxManager/src/Makefile.am	2003-11-22 12:07:56.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libSubMtxManager.la
++libSubMtxManager_la_SOURCES = \
++	basics.c init.c IO.c util.c
+diff -urN spooles-2.2.orig/SymbFac/Makefile.am spooles-2.2.new/SymbFac/Makefile.am
+--- spooles-2.2.orig/SymbFac/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SymbFac/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/SymbFac/src/Makefile.am spooles-2.2.new/SymbFac/src/Makefile.am
+--- spooles-2.2.orig/SymbFac/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/SymbFac/src/Makefile.am	2003-11-22 12:08:59.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libSymbFac.la
++libSymbFac_la_SOURCES = \
++	symbfac.c
+diff -urN spooles-2.2.orig/Tree/Makefile.am spooles-2.2.new/Tree/Makefile.am
+--- spooles-2.2.orig/Tree/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Tree/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Tree/src/Makefile.am spooles-2.2.new/Tree/src/Makefile.am
+--- spooles-2.2.orig/Tree/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Tree/src/Makefile.am	2003-11-22 12:09:51.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libTree.la
++libTree_la_SOURCES = \
++	basics.c compress.c draw.c getCoords.c init.c instance.c\
++	IO.c justify.c maximizeGain.c metrics.c perms.c permute.c\
++	subtree.c util.c
+diff -urN spooles-2.2.orig/Utilities/Makefile.am spooles-2.2.new/Utilities/Makefile.am
+--- spooles-2.2.orig/Utilities/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Utilities/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/Utilities/src/Makefile.am spooles-2.2.new/Utilities/src/Makefile.am
+--- spooles-2.2.orig/Utilities/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/Utilities/src/Makefile.am	2003-11-22 12:14:04.000000000 +0100
+@@ -0,0 +1,5 @@
++noinst_LTLIBRARIES = libUtilities.la
++libUtilities_la_SOURCES = \
++	axpy.c CV.c DV.c FV.c I2OP.c iohb.c\
++	IP.c IV.c newsort.c PCV.c PDV.c PFV.c\
++	PIV.c sortAndCompress.c ZV.c
+diff -urN spooles-2.2.orig/ZV/Makefile.am spooles-2.2.new/ZV/Makefile.am
+--- spooles-2.2.orig/ZV/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ZV/Makefile.am	2003-11-16 22:35:01.000000000 +0100
+@@ -0,0 +1 @@
++SUBDIRS=src
+diff -urN spooles-2.2.orig/ZV/src/Makefile.am spooles-2.2.new/ZV/src/Makefile.am
+--- spooles-2.2.orig/ZV/src/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ spooles-2.2.new/ZV/src/Makefile.am	2003-11-22 12:14:51.000000000 +0100
+@@ -0,0 +1,3 @@
++noinst_LTLIBRARIES = libZV.la
++libZV_la_SOURCES = \
++	basics.c init.c instance.c IO.c profile.c util.c
