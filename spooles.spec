@@ -1,4 +1,5 @@
 Summary:	Library for solving linear systems of equations
+Summary(es):	Biblioteca para resolver sistemas lineares de ecuaciones
 Summary(pl):	Biblioteka pozwalaj±ca rozwi±zywaæ liniowe uk³ady równañ
 Name:		spooles
 Version:	2.2
@@ -20,13 +21,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 SPOOLES is a library for solving sparse real and complex linear
 systems of equations.
 
+%description -l es
+SPOOLES es una biblioteca para resolver sistemas lineares dispersos de
+ecuaciones reales y complejas.
+
 %description -l pl
 SPOOLES jest bibliotek± pozwalaj±c± rozwi±zywaæ rzeczywiste i
-zespolone uk³ady równañ liniowych zawieraj±ce wiele elementów
-zerowych.
+zespolone rozrzedzone uk³ady równañ liniowych.
 
 %package devel
 Summary:	SPOOLES development files
+Summary(es):	Ficheros de desarrollo de SPOOLES
 Summary(pl):	Pliki programistyczne SPOOLES
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
@@ -34,11 +39,15 @@ Requires:	%{name} = %{version}
 %description devel
 SPOOLES development files.
 
+%description devel -l es
+Ficheros de desarrollo de SPOOLES.
+
 %description devel -l pl
 Pliki programistyczne SPOOLES.
 
 %package static
 Summary:	Static SPOOLES library
+Summary(es):	Biblioteca SPOOLES estática
 Summary(pl):	Statyczna biblioteka SPOOLES
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
@@ -46,16 +55,23 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static SPOOLES library.
 
+%description static -l es
+Biblioteca SPOOLES estática.
+
 %description static -l pl
 Statyczna biblioteka SPOOLES.
 
 %package doc-ps
 Summary:	PostScript documentation for SPOOLES
+Summary(es):	Documentación para SPOOLES en PostScript
 Summary(pl):	Dokumentacja dla SPOOLES w formacie PostScript
 Group:		Development/Libraries
 
 %description doc-ps
 PostScript documentation for SPOOLES.
+
+%description doc-ps -l es
+Documentación para SPOOLES en el formato PostScript.
 
 %description doc-ps -l pl
 Dokumentacja dla SPOOLES w formacie PostScript.
