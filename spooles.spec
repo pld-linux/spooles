@@ -1,6 +1,6 @@
 Summary:	Library for solving linear systems of equations
-Summary(es.UTF-8):   Biblioteca para resolver sistemas lineares de ecuaciones
-Summary(pl.UTF-8):   Biblioteka pozwalająca rozwiązywać liniowe układy równań
+Summary(es.UTF-8):	Biblioteca para resolver sistemas lineares de ecuaciones
+Summary(pl.UTF-8):	Biblioteka pozwalająca rozwiązywać liniowe układy równań
 Name:		spooles
 Version:	2.2
 Release:	1
@@ -31,8 +31,8 @@ zespolone rozrzedzone układy równań liniowych.
 
 %package devel
 Summary:	SPOOLES development files
-Summary(es.UTF-8):   Ficheros de desarrollo de SPOOLES
-Summary(pl.UTF-8):   Pliki programistyczne SPOOLES
+Summary(es.UTF-8):	Ficheros de desarrollo de SPOOLES
+Summary(pl.UTF-8):	Pliki programistyczne SPOOLES
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -47,8 +47,8 @@ Pliki programistyczne SPOOLES.
 
 %package static
 Summary:	Static SPOOLES library
-Summary(es.UTF-8):   Biblioteca SPOOLES estática
-Summary(pl.UTF-8):   Statyczna biblioteka SPOOLES
+Summary(es.UTF-8):	Biblioteca SPOOLES estática
+Summary(pl.UTF-8):	Statyczna biblioteka SPOOLES
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -63,8 +63,8 @@ Statyczna biblioteka SPOOLES.
 
 %package doc-ps
 Summary:	PostScript documentation for SPOOLES
-Summary(es.UTF-8):   Documentación para SPOOLES en PostScript
-Summary(pl.UTF-8):   Dokumentacja dla SPOOLES w formacie PostScript
+Summary(es.UTF-8):	Documentación para SPOOLES en PostScript
+Summary(pl.UTF-8):	Dokumentacja dla SPOOLES w formacie PostScript
 Group:		Development/Libraries
 
 %description doc-ps
