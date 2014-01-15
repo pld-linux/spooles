@@ -3,7 +3,7 @@ Summary(es.UTF-8):	Biblioteca para resolver sistemas lineares de ecuaciones
 Summary(pl.UTF-8):	Biblioteka pozwalająca rozwiązywać liniowe układy równań
 Name:		spooles
 Version:	2.2
-Release:	1
+Release:	2
 License:	Public Domain
 Group:		Libraries
 Source0:	http://www.netlib.org/linalg/spooles/%{name}.%{version}.tgz
@@ -11,6 +11,7 @@ Source0:	http://www.netlib.org/linalg/spooles/%{name}.%{version}.tgz
 Source1:	http://www.netlib.org/linalg/spooles/ReferenceManual.ps.gz
 # Source1-md5:	9e5e32828f59c4cf066fdb34218705e7
 Patch0:		%{name}-automake_support.patch
+Patch1:		format-security.patch
 URL:		http://www.netlib.org/linalg/spooles/spooles.2.2.html
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -79,6 +80,7 @@ Dokumentacja dla SPOOLES w formacie PostScript.
 %prep
 %setup -q -c 
 %patch0 -p1
+%patch1 -p1
 
 %build
 find . -name makefile -exec mv {} {}.orig \;
@@ -109,6 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc spooles.2.2.html
 %attr(755,root,root) %{_libdir}/libspooles.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libspooles.so.2
 
 %files devel
 %defattr(644,root,root,755)
