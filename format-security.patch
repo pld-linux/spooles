@@ -1,0 +1,11 @@
+--- spooles-2.2/Utilities/src/iohb.c.orig	2014-01-15 11:59:54.288324327 +0100
++++ spooles-2.2/Utilities/src/iohb.c	2014-01-15 12:00:48.865835020 +0100
+@@ -1725,7 +1725,7 @@ static void upcase(char* S)
+ 
+ static void IOHBTerminate(char* message) 
+ {
+-   fprintf(stderr,message);
++   fputs(message,stderr);
+    exit(1);
+ }
+ 
